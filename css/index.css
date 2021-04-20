@@ -4,7 +4,9 @@
 
 .addImage{
     height: 99%;
-    box-sizing: border-box;
+    background-image:url(../assets/userImg.png);
+   
+     box-sizing: border-box;
 border: 5px dashed black;
 }
 .center{text-align: center;}
@@ -15,3 +17,5 @@ margin: 1px;
 height: 99%;
 
 }
+#addImagecont:hover  #addImage {display: block;}
+
