@@ -1,15 +1,23 @@
 .addImage:hover{
-    background-color: rgba(9,0,0,0.2);
-}
+    background-color: #d1e4f6;
+    }
 
 .addImage{
     height: 99%;
-    background-image:url(../assets/userImg.png);
-   
-     box-sizing: border-box;
-border: 5px dashed black;
+    box-sizing: border-box;
+    border: 5px dashed black;
+    background-color: #d6e9f9;
 }
 .center{text-align: center;}
+
+.f-size4em{
+    font-size: 4em !important;
+}
+.color-bluish{
+
+color:#90a0b3
+
+}
 html,body{
 
 padding: 1px;
