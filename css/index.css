@@ -1,9 +1,9 @@
 .addImage:hover{
-    background-color: #d1e4f6;
+    background-color: #cde3f8;
     }
 
 .addImage{
-    height: 99%;
+    height: 97%;
     box-sizing: border-box;
     border: 5px dashed black;
     background-color: #d6e9f9;
@@ -13,6 +13,17 @@
 .f-size4em{
     font-size: 4em !important;
 }
+.submit{
+    background:transparent;
+
+    height: 50px;
+    width: 200px;
+    font-size: large;
+ color: #369eec;
+    outline: none;
+    border: 1px solid #369eec;
+}
+.submit:hover{background:#369eec;color:white;border:none}
 .color-bluish{
 
 color:#90a0b3
@@ -23,6 +34,7 @@ html,body{
 padding: 1px;
 margin: 1px;
 height: 99%;
+background-color: #d6e9f9;
 
 }
 #addImagecont:hover  #addImage {display: block;}
