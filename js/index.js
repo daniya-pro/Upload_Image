@@ -13,4 +13,18 @@ window.onresize=()=>{resizeDiv()}
 
 
 
-const url = "https://api.cloudinary.com/v1_1/demo/image/upload";
+const url = "https://api.cloudinary.com/v1_1/dthynvvrp/image/upload";
+/**
+ 
+
+
+ , {
+    headers: {
+      Authorization: `token ${token}`
+    }
+  } 
+  
+
+
+  **/
+  const button = document.getElementById("button")
