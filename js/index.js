@@ -29,4 +29,8 @@ const url = "https://api.cloudinary.com/v1_1/dthynvvrp/image/upload";
   **/
   const button = document.getElementById("button")
   button.addEventListener("click",UploadImg)
-var uploadImage=()=>{}
+var uploadImage=()=>{
+
+
+  
+}
