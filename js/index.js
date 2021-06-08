@@ -1,3 +1,4 @@
+var cl = new cloudinary.Cloudinary({cloud_name: "demo", secure: true});
 var addimagecont = document.getElementById("addImagecont")
 
 function resizeDiv(){
