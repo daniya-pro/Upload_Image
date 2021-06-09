@@ -8,6 +8,30 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>  <script>
+    // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDHag4euS8tZSE3vAhCG_UOVHQeoIQg1KU",
+    authDomain: "photo-upload-813ca.firebaseapp.com",
+    databaseURL: "https://photo-upload-813ca-default-rtdb.firebaseio.com",
+    projectId: "photo-upload-813ca",
+    storageBucket: "photo-upload-813ca.appspot.com",
+    messagingSenderId: "780660994916",
+    appId: "1:780660994916:web:c6cd7789734b527c6cc071",
+    measurementId: "G-233HS2JQK7"
+  };
+    // Initialize Firebase
+
+    firebase.initializeApp(firebaseConfig);
+    
+  var database=firebase.database()
+  </script>
 </head>
 
 <body>
@@ -22,6 +46,7 @@
       <br><br> <br>
       <div>
         <input type="file" id="button"  value="Upload Files" name="file" multiple>
+      <p id="error" style="display: none;"></p>
       </div>
     </div>
   </div>
