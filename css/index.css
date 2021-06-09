@@ -8,6 +8,12 @@
     border: 5px dashed black;
     background-color: #d6e9f9;
 }
+#error{
+
+color: red;
+font-family: Verdana;
+
+}
 .center{text-align: center;}
 
 .f-size4em{
