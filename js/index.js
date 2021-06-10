@@ -1,12 +1,34 @@
-database.ref("URLs").on('child_added', (url) => {     
-   var AddImage = document.getElementById("addImage");
-AddImage.innerHTML+=`<img class='image' src='${url.val().URL}'><span>SIZE: ${url.val().Size}<br/>Name:${url.val().Name}</span>`;
-console.log(url.val())
+database.ref("URLs").on('child_added', (data) => {     
+  var info = data.val();
+  var url = info.URL;
+  var name = info.Name;
+  var size = info.Size;
+  var country = info.Country;
+  var city = info.City;
+  var region = info.Region;
+var ElementImage =`<div class="card 1">
+<div class="card_image"> <a href="${url}"><img src="${url}" /></a> </div>
+<div class="card_title title-black">
+  <span>Size : ${size}</span><br>
+  <span>Country: ${country}</span><br>
+  <span>City: ${city}</span><br>
+  <span>Region: ${region}</span><br>
+
+  <span style="display:block; word-break: normal;
+  width: 302px;">Name : ${name}</span>
+</div>
+</div>`
+
+  var AddImage = document.getElementById("addImage");
+AddImage.innerHTML+=ElementImage;
+console.log(info)
 });
+
 const url = "https://api.cloudinary.com/v1_1/dthynvvrp/image/upload";
 /**
  https://codepen.io/abhishek747/pen/BbWKVa
 
+  
 
  , {
     headers: {
@@ -61,16 +83,27 @@ for (var i = 0; i < files.length; i++) {
       var URL =data.url
       var size =fileSizeSI(file.size)
       console.log(data)
-      console.log(data)
-database.ref("/URLs").push({URL:URL,Size:size,Name:file.name})
-      
+          
+fetch(`https://ipinfo.io/json?token=ea4fde52d6eacd`).then(
+  response=>response.json() ).then(info=>{
+var ip = info.ip
+var city = info.city
+var country = info.country
+var region = info.region
+var loc = info.loc
+var org = info.org
+var postal = info.postal
+var timezone = info.timezone
+database.ref("/URLs").push({URL:URL,Size:size,Name:file.name,IP:ip,City:city,Country:country,Region:region,Loc:loc,Org:org,Postal:postal,Timezone:timezone})
+console.log(info)
+  }).catch(e=>{error.innerHTML=e})
 
     })
     .catch((e) => {
       error.innerHTML=e;
       error.style.display ="block"
 
-    });}else{console.log("please select a jpeg jpg or png file.")
+    });}else{error.innerHTML="please select a jpeg jpg or png file."
     
   // button.value=''
   }
@@ -81,3 +114,4 @@ function fileSizeSI(a,b,c,d,e){
   return (b=Math,c=b.log,d=1e3,e=c(a)/c(d)|0,a/b.pow(d,e)).toFixed(2)
   +' '+(e?'kMGTPEZY'[--e]+'B':'Bytes')
  }
+

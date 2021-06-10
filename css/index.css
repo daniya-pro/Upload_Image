@@ -26,10 +26,12 @@ color:#90a0b3
 }
 a{    color: dodgerblue;
 }
-.image{
-
-max-height: 300px;
-max-width:300px;
+img{
+border-radius: 40px;
+max-height: 300px !important;
+min-height: 300px !important;
+min-width:300px !important;
+max-width:300px !important;
 }
 html,body{
 
@@ -50,3 +52,46 @@ background-color: #d6e9f9;
         to {background:transparent;}
         
         } 
+        .cards-list {
+            z-index: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+          }
+          
+          .card {
+            margin: 30px auto;
+            border:1px solid #000;
+            border-radius: 40px;
+            cursor: pointer;
+            height: 300px;
+            transition: 0.4s;
+          }
+          
+      
+          
+          .card .card_title {
+            text-align: center;
+            border-radius: 0px 0px 40px 40px;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-top: -110px;
+         
+          }
+          
+       
+          
+          .title-black {
+            color: black;
+          }
+          
+          
+          
+          @media all and (max-width: 500px) {
+            .card-list {
+              flex-direction: column;
+            }
+          }
+          
+          
