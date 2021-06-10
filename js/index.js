@@ -7,7 +7,7 @@ database.ref("URLs").on('child_added', (data) => {
   var city = info.City;
   var region = info.Region;
 var ElementImage =`<div class="card 1">
-<div class="card_image"> <a href="${url}"><img src="${url}" /></a> </div>
+<div class="card_image"> <a target='_blank' href="${url}"><img src="${url}" /></a> </div>
 <div class="card_title title-black">
   <span>Size : ${size}</span><br>
   <span>Country: ${country}</span><br>
